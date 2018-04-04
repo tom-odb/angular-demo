@@ -1,0 +1,54 @@
+{
+  "uploads": [
+    {
+      "id": "123",
+      "externalName": "Loonbrief van 07/2017",
+      "isBulk": false,
+      "bulkOperationId": "",
+      "bulkOperationReference": "",
+      "uploadDate": "2018-04-04T12:29:13.633Z",
+      "referenceDate": "2018-04-04T12:29:13.633Z",
+      "organization": {
+        "id": "123",
+        "name": "Stad Antwerpen"
+      },
+      "organizationUnit": {
+        "id": "123",
+        "name": "HRM"
+      },
+      "documentType": {
+        "id": "stri123ng",
+        "name": "Loonbrief"
+      },
+      "destinations": [
+        {
+          "uniqueIdentifier": "123",
+          "id": "123",
+          "firstName": "David",
+          "lastName": "Knetemann"
+        },
+        {
+          "uniqueIdentifier": "456",
+          "id": "456",
+          "firstName": "Laurens",
+          "lastName": "Peeters"
+        }
+      ],
+      "destinationCounts": {
+        "total": 2,
+        "committed": 0,
+        "deleted": 0,
+        "locked": 0
+      },
+      "fileUploadState": "success",
+      "_actions": [
+        [
+          "edit",
+          "commit",
+          "delete",
+          "lock"
+        ]
+      ]
+    }
+  ]
+}
