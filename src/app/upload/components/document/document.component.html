@@ -1,0 +1,3 @@
+<!-- <p>{{document | json}}</p> -->
+<p>{{document?.externalName}}</p>
+<app-destination [destination]="destination" *ngFor="let destination of document?.destinations" (clicked)="destinationClicked($event)"></app-destination>

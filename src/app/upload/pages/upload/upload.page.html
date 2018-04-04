@@ -4,7 +4,7 @@
 
 <div *ngIf="!loading">
   <ng-container *ngIf="(upload$ | async); let upload">
-    <h2>{{upload?.title}}</h2>
-    <div>{{upload | json}}</div>
+    <app-document [document]="upload"></app-document>
   </ng-container>
 </div>
+  
