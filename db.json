@@ -48,7 +48,14 @@
           "delete",
           "lock"
         ]
-      ]
+      ],
+      "metaData": {
+        "personnelNumber": "123456789",
+        "wage": {
+          "bruto": 5000,
+          "netto": 2500
+        }
+      }
     }
   ]
 }
