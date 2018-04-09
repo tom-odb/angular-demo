@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Edit Form</h1>
+  <form *ngIf="dataForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+    <div [formGroup]="dataForm.controls.algemeen">
+      <app-form-title>Algemeen</app-form-title>
+      <ng-container *ngFor="let option of algemeenData">
+        <app-form-option [formControlName]="option.key" [formoption]="option"></app-form-option>
+      </ng-container>
+    </div>
+    <div [formGroup]="dataForm.controls.bestemmelingen">
+        <app-form-title>bestemmelingen</app-form-title>
+        <ng-container *ngFor="let option of bestemmelingenData">
+          <app-form-option [formControlName]="option.key" [formoption]="option"></app-form-option>
+        </ng-container>
+      </div>
+      <div [formGroup]="dataForm.controls.metadata">
+          <app-form-title>Metadata</app-form-title>
+          <ng-container *ngFor="let option of metadataData">
+            <app-form-option [formControlName]="option.key" [formoption]="option"></app-form-option>
+          </ng-container>
+        </div>
+    <button type="submit" class="a-button a-button--primary">Submit</button>
+  </form>
+</div>

@@ -1,5 +1,13 @@
 import { Action } from "redux";
 
+export interface UploadMeta {
+  personnelNumber: string;
+  wage: {
+    bruto: number;
+    netto: number;
+  };
+}
+
 export interface UploadDestination {
   uniqueIdentifier: string;
   id: string;
@@ -10,8 +18,8 @@ export interface UploadDestination {
 export interface Upload {
   id: string;
   externalName: string;
-  uploadDate: Date;
-  referenceDate: Date;
+  uploadDate: string;
+  referenceDate: string;
   organization: {
     id: string;
     name: string;
@@ -33,6 +41,7 @@ export interface Upload {
   };
   fileUploadState: string;
   _actions: string[][];
+  metaData: UploadMeta;
 }
 
 export interface UploadAction extends Action {

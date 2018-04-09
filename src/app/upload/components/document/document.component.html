@@ -1,0 +1,11 @@
+<!-- <p>{{document | json}}</p> -->
+<p>{{document?.externalName}}</p>
+<h4>Algemeen</h4>
+<hr>
+<app-information-block [informationblock]="information" [maxsize]="3"></app-information-block>
+<h4>Bestemmelingen</h4>
+<hr>
+<app-destination *ngFor="let destination of document?.destinations" [destination]="destination" (clicked)="destinationClicked($event)"></app-destination>
+<h4>Metadata</h4>
+<hr>
+<app-information-block [informationblock]="meta" [maxsize]="3"></app-information-block>

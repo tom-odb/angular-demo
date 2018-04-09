@@ -1,0 +1,8 @@
+<li>
+  <span>{{information?.label}} : </span>
+  <ng-container [ngSwitch]="information?.type">
+    <span *ngSwitchCase="'date'">{{information?.value | customDate}}</span>
+    <span *ngSwitchCase="'valuta'">{{information?.value | customValuta}}</span>
+    <span *ngSwitchDefault>{{information?.value}}</span>
+  </ng-container>
+</li>

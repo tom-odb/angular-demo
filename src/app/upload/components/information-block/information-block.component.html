@@ -1,0 +1,7 @@
+<app-information *ngFor="let information of visible" [information]="information"></app-information>
+<ng-container *ngIf="show">
+  <app-information *ngFor="let information of invisible" [information]="information"></app-information>
+</ng-container>
+<button class="a-button a-button--transparent" (click)="toggleVisible()">
+  Meer/Minder
+</button>
