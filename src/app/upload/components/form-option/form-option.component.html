@@ -1,0 +1,21 @@
+<div class="form-group u-margin">
+  <div class="a-input" [class.is-required]="formoption?.required"> <!-- adds class is-required if formoption.required = true -->
+    <label class="a-input__label" for="">{{formoption?.label}}</label>
+    <ng-container [ngSwitch]="formoption?.type">
+      <mat-form-field *ngSwitchCase="'date'">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" required="{{formoption?.required}}"
+        [(ngModel)]="data"
+        (ngModelChange)="handleInput()">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <input *ngSwitchDefault type="text"
+       class="form-control"
+        placeholder="{{formoption?.label}}"
+        required="{{formoption?.required}}"
+        name="option"
+        [(ngModel)]="data"
+        (ngModelChange)="handleInput()">
+    </ng-container>
+  </div>
+</div>

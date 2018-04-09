@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 import { Upload } from '../../store';
 import { DocumentInformations } from "../information/information.types"
 import { path } from "ramda";
-import { DOCUMENT_META_LABELS, DOCUMENT_INFORMATION_LABELS } from './document.conf';
+import { DOCUMENT_META_LABELS, DOCUMENT_INFORMATION_LABELS } from '../../upload.conf';
 
 @Component({
     selector: "app-document",

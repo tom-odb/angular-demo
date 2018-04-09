@@ -1,0 +1,9 @@
+<a routerLink="../">Back</a>
+
+<p *ngIf="loading">Loading...</p>
+
+<div *ngIf="!loading">
+  <ng-container *ngIf="(upload$ | async); let upload">
+    <app-form-document [document]="upload$ | async"></app-form-document>
+  </ng-container>
+</div>
